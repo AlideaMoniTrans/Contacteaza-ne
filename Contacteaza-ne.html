@@ -94,28 +94,44 @@ body {
 </style>
 
 <style>
-/* Green */
-.success {
-  border-color: #04AA6D;
-  color: green;
+.button {
+  border-radius: 4px;
+  background-color: #1C5AF3;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.WhatsApp:hover {
-  background-color: #04AA6D;
-  color: white;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-/* Blue */
-.info {
-  border-color: #2196F3;
-  color: dodgerblue;
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-.Facebook:hover {
-  background: #2196F3;
-  color: white;
+.button:hover span {
+  padding-right: 25px;
 }
 
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 </style>
 
 <body>
@@ -133,7 +149,7 @@ body {
 <div id="main">
   <button class="openbtn" onclick="openNav()">☰ Meniu</button>
   <h2> • Contacteaza-ne pe 
-  <a href="https://www.facebook.com/profile.php?id=61554523032882&locale=ro_RO"><button class="btn info">Facebook</button></a>
+  <a href="https://www.facebook.com/profile.php?id=61554523032882&locale=ro_RO"><button class="button"><span>Facebook</span></button></a>
 sau pe WhatsApp la</h2><h1> <a class="single" href="tel:+40762580443">+40762580443</a></h1
 </div>
 
